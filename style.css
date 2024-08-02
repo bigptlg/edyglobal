@@ -130,13 +130,15 @@ button:hover {
 }
 
 #proximo{
-    top: 35%;
+    top: 50%;
+    transform: translateY(-50%);
     right:5px;
 }
 
 
 #anterior{
-    top: 35%;
+    top: 50%;
+    transform: translateY(-50%);
     left: 5px;
 }
 
