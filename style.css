@@ -111,10 +111,12 @@ button:hover {
     height: 100%;
 }
 
-.navegacao span{
+.galeria span{
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     background-color: transparent;
-    border: solid 3px #de933b;
+    border: solid 2px #de933b;
     width: 15px;
     height: 17px;
     margin: 10px;
@@ -124,21 +126,17 @@ button:hover {
     transition: .5s ease-in-out;
 }
 
-.navegacao span:hover{
+.galeria span:hover{
     background-color: #de933b;
     transform: scale(1.1);
 }
 
 #proximo{
-    top: 50%;
-    transform: translateY(-50%);
     right:5px;
 }
 
 
 #anterior{
-    top: 50%;
-    transform: translateY(-50%);
     left: 5px;
 }
 
