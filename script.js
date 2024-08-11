@@ -1,29 +1,50 @@
-function menu() {
-    document.querySelector("#menu").classList.toggle("menu")
-}
-
+    function menu() {
+        document.querySelector("#menu").classList.toggle("menu")
+    }
 
 document.addEventListener("DOMContentLoaded", function() {
-    var total = document.querySelectorAll(".imagem").length;
-    var imagem = 0;
+
+
+    var imagens = document.querySelectorAll(".carrossel .imagem");
+    var numeroImg= imagens.length;
+    var numero = 0;
 
     function proximo() {
-        imagem = (imagem + 1) % 4;
-        atualiza();
+        numero++;
+        if (numero == numeroImg) {
+            numero = 0;
+        }
+        const posicao = numero * -100;
+        imagens.forEach(function(imagem) {
+            imagem.style.transform = `translateX(${posicao}%)`;
+        });
     }
 
     function anterior() {
-        imagem = (imagem - 1 + 4) % 4;
-        atualiza();
+        numero--;
+        if (numero == -1) {
+            numero = numeroImg - 1;
+        }
+        const posicao = numero * -100;
+        imagens.forEach(function(imagem) {
+            imagem.style.transform = `translateX(${posicao}%)`;
+        });
     }
 
-    function atualiza() {
-        var posicao = imagem * -100 + "%";
-        document.querySelector(".imagens").style.transform = "translateX(" + posicao + ")";
+    document.querySelector("#anteriorBtn").addEventListener('click', anterior);
+    document.querySelector("#proximoBtn").addEventListener('click', proximo);
+
+    function iniciarIntervalo() {
+        intervalo = setInterval(proximo, 3000);
     }
 
-    document.getElementById("proximo").addEventListener("click", proximo);
-    document.getElementById("anterior").addEventListener("click", anterior);
+    function pararIntervalo() {
+        clearInterval(intervalo);
+    }
 
-    setInterval(proximo, 3000);
+    var carrossel = document.querySelector('.carrossel');
+    /*carrossel.addEventListener('mouseenter', pararIntervalo);
+    carrossel.addEventListener('mouseleave', iniciarIntervalo);*/
+
+    iniciarIntervalo();
 });
