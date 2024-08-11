@@ -1,8 +1,21 @@
+:root {
+    --primary-bg-color: #4ea9d3;   /* Cor de fundo principal */
+    --secondary-bg-color: #de933b; /* Cor de fundo secundária */
+    --text-color: #fff;            /* Cor do texto */
+    --hover-bg-color: #4ea9d3;     /* Cor de fundo ao passar o mouse */
+    --hover-border-color: #de933b; /* Cor da borda ao passar o mouse */
+    --button-bg-color: transparent; /* Cor de fundo do botão */
+    --button-border-color: #fff;    /* Cor da borda do botão */
+    --carrossel-hover-bg: #4ea9d39c; /* Cor de fundo do botão do carrossel ao passar o mouse */
+    --input-border-color: #ccc;     /* Cor da borda do input */
+    --placeholder-color: #de933b;   /* Cor do placeholder */
+    --carrossel-button-color: #de933b; /* Cor do botão do carrossel */
+}
+
 * {
     margin: 0;
     padding: 0;
-    color: #fff;
-    text-align: center;
+    color: var(--text-color);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -11,16 +24,18 @@ h1, h2, h3 {
     margin: 10px;
 }
 
-body {
-    background-color: #4ea9d3;
-    margin-top: 100px; 
+body { 
+    background-color: var(--primary-bg-color);
+    margin-top: 70px;
+    overflow-x: hidden; 
+    position: relative;
 }
 
-p{
+p, a {
     font-weight: bold;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -35,7 +50,7 @@ ul li {
 }
 
 header {
-     background-color: #de933b;
+    background-color: var(--secondary-bg-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -44,14 +59,18 @@ header {
     top: 0;
     position: fixed;
     width: 100%;
-    overflow: hidden; 
 }
 
-header .logo {
+header .logo{
     position: absolute;
-    width: 8%;
-    left: 50%;
-    transform: translateX(-50%);
+    min-width: 30px;
+    max-width: 70px;
+    right: 20%;
+    top: 7px;
+}
+
+.logo a:hover {
+    display: block;
 }
 
 label {
@@ -59,94 +78,99 @@ label {
     cursor: pointer;
 }
 
+nav {
+    margin-right: 20px;
+}
+
 nav ul {
     list-style: none;
     display: flex;
 }
 
-nav ul li {
+nav ul li, nav a {
     padding: 10px;
     font-weight: bold;
 }
 
-nav a {
-    text-decoration: none;
-    padding: 10px;
-}
-
 nav a:hover {
-    background-color: #4ea9d3;
+    background-color: var(--hover-bg-color);
     border-radius: 25px;
 }
 
 button {
-    background-color: #4ea9d3;
-    border: solid 3px #fff;
+    background-color: var(--button-bg-color);
+    border: solid 3px var(--button-border-color);
     border-radius: 7px;
     padding: 10px;
     transition: .3s ease-in-out;
 }
 
 button:hover {
-    background-color: #de933b;
+    background-color: var(--secondary-bg-color);
     border: none;
-    border: solid 3px #de933b;
+    border: solid 3px var(--hover-border-color);
     transform: scale(1.2); 
 }
 
-.galeria {
-    width: 100%;
-    overflow: hidden;
-    box-shadow: 4px 4px 15px #000;
-    margin: 20px auto;
+.carrossel {
+	position: relative;
+	display: flex;
+	width: 100dvw;
+	max-height: 90dvh;
+	overflow: hidden;
 }
 
-.imagens {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+.carrossel button {
+	background-color: transparent;
+	color: var(--carrossel-button-color);
+	border: none;
+	font-size: 30px;
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+	border-radius: 20%;
+	transition: all .5s ease;
+	z-index: 10;
 }
 
-.galeria .imagens img {
-    width: 100%;
-    height: 100%;
+.carrossel button:hover {
+	background-color: var(--carrossel-hover-bg);
+	backdrop-filter: blur(10px);
 }
 
-.galeria span{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: transparent;
-    border: solid 2px #de933b;
-    width: 15px;
-    height: 17px;
-    margin: 10px;
-    color: #f0f0ff;
-    padding: 10px;
-    border-radius: 10px;
-    transition: .5s ease-in-out;
+.carrossel #proximoBtn {
+	right: 10px;
 }
 
-.galeria span:hover{
-    background-color: #de933b;
-    transform: scale(1.1);
+.carrossel #anteriorBtn {
+	left: 10px;
 }
 
-#proximo{
-    right:5px;
+.carrossel .imagem {
+	position: relative;
+	width: 100%;
+	flex-shrink: 0;
+	transition: all 1s ease;
 }
 
-
-#anterior{
-    left: 5px;
+.carrossel .imagem img {
+	width: 100%;
 }
 
-.introducao{
+section{
+    text-align: center;
+}
+
+.introducao {
     text-align: center;
     width: 95%;
     margin: auto;
 }
 
-#nos{
+#nos {
     margin-top: 10%;
 }
 
@@ -157,111 +181,62 @@ button:hover {
     margin: 10px;
 }
 
-.containere section{
+.containere section, .containerd section {
     width: 50%;
 }
 
-.containere .texto {
-    text-align: rifht;
-    margin: 5%;
-}
-
-.containere img{
-    border: solid 5px #fff;
+.containere img, .containerd img {
+    border: solid 5px var(--text-color);
     border-radius: 10%;
     width: 80%;
 }
 
-.containere h1{
+.containere p {
+    text-align: right;
+    margin: 5%;
+}
+
+.containerd p {
+    text-align: left;
+    margin: 5%;
+}
+
+.containere h1, .containerd h1 {
     font-size: xx-large;
 }
 
-.containere h3, p{
-    text-align: right;
-    font-size: large;
-}
-
-.containere h3 {
+.containere h3, .containerd h3, .plano h3, .servicos h2 {
     font-size: x-large;
 }
 
-
-.containerd section{
-    width: 50%;
-}
-
-.containerd .texto {
-    text-align: rifht;
-    margin: 5%;
-}
-
-.containerd img{
-    border: solid 5px #fff;
-    border-radius: 10%;
-    width: 80%;
-}
-
-.containerd h1{
-    font-size: xx-large;
-}
-
-.containerd h3, p{
-    text-align: right;
+.containere p, .containerd p, .containe h3, .plano p, .servicos p, #sobre p {
     font-size: large;
 }
 
-.vantagens p, .vantagens h2{
-    text-align: start;
-}
-
-.vantagens{
+.vantagens p, .vantagens h2 {
+    text-align: left;
     margin: 10px;
 }
 
-.vantagens p{
+.vantagens p {
     padding: 20px;
 }
 
-.plano{
+.plano, .servicos {
     display: flex;
     justify-content: center;
     text-align: center;
 }
 
-.plano section{
-    width: 25%;
-}
-
-.plano img{
-    width: 90%;
-    border: solid 5px #fff;
-    border-radius: 10%;
-}
-
-.containerd h3 {
-    font-size: x-large;
-}
-
-#servicos {
-    text-align: left;
-    margin-left: 5%;
-    margin-top: 10%;
-}
-  
-.servicos {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-
-.servicos section{
+.plano section, .servicos section {
     width: 25%;
     margin: 50px;
+    text-align: center;
 }
 
-.servicos img{
+.plano img, .servicos img {
     width: 90%;
-    border: solid 5px #fff;
+    border: solid 5px var(--text-color);
     border-radius: 10%;
 }
 
@@ -269,94 +244,83 @@ button:hover {
     margin: 5%;
 }
 
-.sobre{
+#sobre {
     display: flex;
     justify-content: center;
     text-align: center;
 }
 
-.sobre form {
+#sobre form {
     max-width: 500px;
     padding: 20px;
-    border-radius: calc(5px + 0px);
-  }
-  
-  input {
-    border: 1px solid #ccc;
-    width: 45%;
-  }
-     
-  textarea{
-    width: 100%;
-  }
+    border-radius: 5px;
+}
 
-  input,
-  textarea {
+input {
+    border: 1px solid var(--input-border-color);
+    width: 45%;
+}
+
+textarea {
+    width: 100%;
+}
+
+input, textarea {
     outline: none;
     padding: 10px;
     margin: 10px 0;
     border-radius: 5px;
-    color: #4ea9d3;
+    color: var(--primary-bg-color);
     font-weight: bold;
-  }
+}
 
-  input::placeholder,textarea::placeholder {
-    color: #de933b;
+input::placeholder, textarea::placeholder {
+    color: var(--placeholder-color);
     font-weight: bolder;
-  }
+}
 
-  .botao-whatsapp {
-    border: solid;
-    padding: 10px;
-    border-radius: 10px;
+#sobre section {
+    margin: 50px;
+}
+
+#sobre #p {
+    margin: 20px;
     text-align: center;
-    transition: .3s ease-in-out;
-  }
-
-  .botao-whatsapp:hover {
-    background-color: #de933b;
-    border: none;
-    border: solid 3px #de933b;
+    font-weight: bold;
 }
 
-.sobre section {
-margin: 50px;
-}
-
-.sobre #p {
-margin: 20px;
-text-align: center;
-font-weight: bold;
-}
-
-.sobre button{
-width: 70%;
+#sobre button {
+    width: 70%;
 }
 
 footer {
-background-color: #de933b;
-padding: 4%;
+    background-color: var(--secondary-bg-color);
+    padding: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 
-footer p{
+footer p {
     font-size: medium;
     margin: 15px;
 }
 
-.social ul{
-list-style: none;
-margin: 15px;
+.social ul {
+    list-style: none;
+    margin: 15px;
 }
 
 .social ul li {
-display: inline-block;
-margin-right: 10px;
+    display: inline-block;
+    margin-right: 10px;
 }
 
-.social i{
+.social i {
     font-size: 25px;
 }
 
-.social i:hover{
+.social i:hover {
     transform: scale(1.2);
 }
