@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCTV - Edy Global Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                'custom-orange': '#de933b',
+                'custom-blue': '#4ea9d3',
+                'custom-white': '#ffffff',
+              }
+            }
+          }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        #menu-toggle-button span {
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-custom-white text-gray-800 antialiased">
+    
+    <header class="bg-custom-orange text-custom-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html">
+                <img src="/assets/images/logo1.png" alt="Edy Global solutions" class="h-10 md:h-12">
+            </a>
+            
+            <button id="menu-toggle-button" onclick="toggleMenu()" class="md:hidden p-2 text-custom-white focus:outline-none">
+                <span class="block w-6 h-0.5 bg-custom-white my-[3px]"></span>
+                <span class="block w-6 h-0.5 bg-custom-white my-[3px]"></span>
+                <span class="block w-6 h-0.5 bg-custom-white my-[3px]"></span>
+            </button>
+
+            <nav id="mobile-nav" class="hidden md:flex md:items-center absolute md:static top-full left-0 w-full md:w-auto bg-custom-orange md:bg-transparent shadow-lg md:shadow-none py-4 md:py-0">
+                <ul class="flex flex-col md:flex-row items-center md:space-x-6 space-y-4 md:space-y-0 w-full md:w-auto">
+                    <li><a href="index.html" class="block py-2 px-4 md:p-0 hover:text-custom-blue transition-colors duration-300">Inicio</a></li>
+                    <li><a href="#servicos" class="block py-2 px-4 md:p-0 hover:text-custom-blue transition-colors duration-300">Outros Serviços</a></li>
+                    <li><a href="#sobre" class="block py-2 px-4 md:p-0 hover:text-custom-blue transition-colors duration-300">Contactar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="py-12 px-4 bg-custom-white">
+            <div class="container mx-auto">
+                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                    <div class="md:w-1/2">
+                        <img src="/assets/images/cctv1.jpeg" alt="Instalação de CCTV profissional" class="rounded-lg shadow-xl w-full h-auto object-cover">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h1 class="text-3xl md:text-4xl font-bold mb-6 text-custom-orange">Proteja sua propriedade com soluções profissionais de CCTV</h1>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Proteja o que mais importa para você com a Edy Global Solutions, o seu parceiro de confiança em soluções de segurança doméstica e empresarial. Nossa equipe de especialistas altamente treinados está pronta para fornecer instalações especializadas de sistemas de CCTV, garantindo que sua casa ou empresa esteja sempre protegida.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed">
+                            Então, não espere. Proteja sua propriedade hoje com a Edy Global Solutions, seu provedor de serviços de CCTV preferido. Entre em contato conosco hoje mesmo para saber mais sobre nossos serviços e como podemos ajudar a garantir a segurança de sua propriedade.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12 px-4 bg-gray-50">
+            <div class="container mx-auto">
+                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                    <div class="md:w-1/2 md:order-2"> 
+                        <img src="/assets/images/cctv2.jpeg" alt="Vigilância eficiente com CCTV Edy Global Solutions" class="rounded-lg shadow-xl w-full h-auto object-cover">
+                    </div>
+                    <div class="md:w-1/2 md:order-1">
+                        <h2 class="text-2xl font-semibold mb-4 text-custom-blue">Soluções Personalizadas para Sua Segurança</h2>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Na Edy Global Solutions, compreendemos a importância de proteger o que mais importa para você. Por isso, oferecemos soluções personalizadas, adaptadas às suas necessidades específicas. Nossos sistemas de CCTV utilizam tecnologia de ponta para garantir a vigilância eficiente e a detecção de qualquer atividade suspeita.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed">
+                            Escolha a Edy Global Solutions como seu parceiro em segurança e tenha a certeza de que sua propriedade está em mãos seguras. Entre em contato conosco hoje mesmo para discutir suas necessidades de segurança e explorar as soluções de CCTV que melhor se adequam ao seu ambiente. Estamos aqui para proteger o que mais importa para você.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12 px-4 bg-custom-white">
+            <div class="container mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 text-custom-blue">Vantagens de Ter Um Sistema de Câmeras de Vigilância</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-shield-halved text-3xl text-custom-orange mr-3"></i>
+                            <h3 class="text-xl font-semibold text-gray-800">Segurança Reforçada</h3>
+                        </div>
+                        <p class="text-gray-600 text-sm">Inibe a ação de criminosos e fornece evidências valiosas em caso de incidentes.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-clock-rotate-left text-3xl text-custom-orange mr-3"></i>
+                            <h3 class="text-xl font-semibold text-gray-800">Monitoramento 24/7</h3>
+                        </div>
+                        <p class="text-gray-600 text-sm">Acompanhe o que acontece em tempo real, garantindo vigilância constante.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-user-secret text-3xl text-custom-orange mr-3"></i>
+                            <h3 class="text-xl font-semibold text-gray-800">Prevenção de Incidentes</h3>
+                        </div>
+                        <p class="text-gray-600 text-sm">A presença de câmeras dissuade atividades suspeitas e potenciais criminosos.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                         <div class="flex items-center mb-3">
+                            <i class="fas fa-coins text-3xl text-custom-orange mr-3"></i>
+                            <h3 class="text-xl font-semibold text-gray-800">Redução de Custos</h3>
+                        </div>
+                        <p class="text-gray-600 text-sm">Pode reduzir a necessidade de pessoal de segurança, otimizando despesas.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-users-viewfinder text-3xl text-custom-orange mr-3"></i>
+                            <h3 class="text-xl font-semibold text-gray-800">Supervisão de Funcionários</h3>
+                        </div>
+                        <p class="text-gray-600 text-sm">Monitore o desempenho e garanta a conformidade com os procedimentos em ambientes comerciais.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-mobile-screen-button text-3xl text-custom-orange mr-3"></i>
+                            <h3 class="text-xl font-semibold text-gray-800">Acesso Remoto</h3>
+                        </div>
+                        <p class="text-gray-600 text-sm">Verifique sua propriedade de qualquer lugar através de dispositivos conectados.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12 px-4 bg-gray-50">
+            <div class="container mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 text-custom-blue">Escolha o Seu Kit de Vigilância</h2>
+                <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <div class="bg-custom-white border border-gray-200 rounded-lg shadow-lg p-6 flex flex-col text-center items-center hover:shadow-xl transition-shadow duration-300">
+                        <img src="/assets/images/kit1.jpeg" alt="Kit de 4 Câmeras" class="w-full h-48 object-contain rounded-md mb-4">
+                        <h3 class="text-2xl font-semibold mb-2 text-custom-orange">Kit de 4 Câmeras</h3>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">Ideal para proteger residências e pequenos estabelecimentos, monitorando áreas-chave com alta resolução.</p>
+                        <a href="https://api.whatsapp.com/send?phone=244948558954&text=Ol%C3%A1%21+Desejo+adquirir+o+kit+de+4+c%C3%A2meras." target="_blank"
+                           class="mt-auto inline-block bg-custom-blue text-custom-white px-8 py-3 rounded-md hover:bg-custom-orange transition-colors duration-300 font-semibold text-lg">
+                            235.000 Kz
+                        </a>
+                    </div>
+
+                    <div class="bg-custom-white border border-gray-200 rounded-lg shadow-lg p-6 flex flex-col text-center items-center hover:shadow-xl transition-shadow duration-300">
+                        <img src="/assets/images/kit2.jpeg" alt="Kit de 8 Câmeras" class="w-full h-48 object-contain rounded-md mb-4">
+                        <h3 class="text-2xl font-semibold mb-2 text-custom-orange">Kit de 8 Câmeras</h3>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">Perfeito para propriedades maiores ou que requerem cobertura mais ampla, monitorando várias áreas simultaneamente.</p>
+                        <a href="https://api.whatsapp.com/send?phone=244948558954&text=Ol%C3%A1%21+Desejo+adquirir+o+kit+de+8+c%C3%A2meras." target="_blank"
+                           class="mt-auto inline-block bg-custom-blue text-custom-white px-8 py-3 rounded-md hover:bg-custom-orange transition-colors duration-300 font-semibold text-lg">
+                            435.000 Kz
+                        </a>
+                    </div>
+
+                    <div class="bg-custom-white border border-gray-200 rounded-lg shadow-lg p-6 flex flex-col text-center items-center hover:shadow-xl transition-shadow duration-300">
+                        <img src="/assets/images/kit3.jpeg" alt="Kit de 16 Câmeras" class="w-full h-48 object-contain rounded-md mb-4">
+                        <h3 class="text-2xl font-semibold mb-2 text-custom-orange">Kit de 16 Câmeras</h3>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">Escolha premium para grandes propriedades ou locais que exigem segurança intensiva e vigilância detalhada.</p>
+                        <a href="https://api.whatsapp.com/send?phone=244948558954&text=Ol%C3%A1%21+Desejo+adquirir+o+kit+de+16+c%C3%A2meras." target="_blank"
+                           class="mt-auto inline-block bg-custom-blue text-custom-white px-8 py-3 rounded-md hover:bg-custom-orange transition-colors duration-300 font-semibold text-lg">
+                            645.000 Kz
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos" class="py-12 px-4">
+            <div class="container mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 text-custom-blue">Conheça Nossos Outros Serviços</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    
+                    <div class="servico bg-custom-white border border-gray-200 rounded-lg shadow-lg p-6 flex flex-col text-center hover:shadow-xl transition-shadow duration-300">
+                        <a href="gps.html" class="block mb-4">
+                            <img src="/assets/images/servico1.jpeg" alt="GPS Veicular" class="w-full h-40 object-cover rounded-md mx-auto">
+                        </a>
+                        <h3 class="text-xl font-semibold mb-2 text-custom-orange">Instalação de GPS</h3>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">Segurança e controle sobre seus veículos com rastreamento preciso.</p>
+                        <a href="gps.html" class="mt-auto inline-block bg-custom-blue text-custom-white px-6 py-2 rounded-md hover:bg-custom-orange transition-colors duration-300 font-semibold">Saiba mais</a>
+                    </div>
+
+                    <div class="servico bg-custom-white border border-gray-200 rounded-lg shadow-lg p-6 flex flex-col text-center hover:shadow-xl transition-shadow duration-300">
+                        <a href="alarme.html" class="block mb-4">
+                            <img src="/assets/images/servico2.jpeg" alt="Alarme Veicular" class="w-full h-40 object-cover rounded-md mx-auto">
+                        </a>
+                        <h3 class="text-xl font-semibold mb-2 text-custom-orange">Instalação de Alarme Veicular</h3>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">Proteção eficaz contra roubos e furtos para sua tranquilidade.</p>
+                        <a href="alarme.html" class="mt-auto inline-block bg-custom-blue text-custom-white px-6 py-2 rounded-md hover:bg-custom-orange transition-colors duration-300 font-semibold">Saiba mais</a>
+                    </div>
+
+                    <div class="servico bg-custom-white border border-gray-200 rounded-lg shadow-lg p-6 flex flex-col text-center hover:shadow-xl transition-shadow duration-300">
+                        <a href="cctv.html" class="block mb-4"> 
+                            <img src="/assets/images/servico3.jpeg" alt="CCTV" class="w-full h-40 object-cover rounded-md mx-auto">
+                        </a>
+                        <h3 class="text-xl font-semibold mb-2 text-custom-orange">Montagem de CCTV</h3>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">Monitoramento em tempo real para segurança de propriedades.</p>
+                        <a href="cctv.html" class="mt-auto inline-block bg-custom-orange text-custom-white px-6 py-2 rounded-md font-semibold cursor-default">Você está aqui</a>
+                    </div>
+
+                    <div class="servico bg-custom-white border border-gray-200 rounded-lg shadow-lg p-6 flex flex-col text-center hover:shadow-xl transition-shadow duration-300">
+                        <a href="ti.html" class="block mb-4">
+                            <img src="/assets/images/servico4.jpeg" alt="Redes de TI" class="w-full h-40 object-cover rounded-md mx-auto">
+                        </a>
+                        <h3 class="text-xl font-semibold mb-2 text-custom-orange">Montagem de Redes de TI</h3>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">Conectividade e segurança de dados para sua empresa.</p>
+                        <a href="ti.html" class="mt-auto inline-block bg-custom-blue text-custom-white px-6 py-2 rounded-md hover:bg-custom-orange transition-colors duration-300 font-semibold">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="bg-gray-100 py-12 px-4">
+            <div class="container mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-start">
+                <div class="bg-custom-white p-6 md:p-8 rounded-lg shadow-lg">
+                    <h2 class="text-2xl md:text-3xl font-bold mb-2 text-custom-orange">Entre em Contacto</h2>
+                    <p class="text-gray-700 mb-6">Estamos prontos para atendê-lo. Entre em contacto connosco.</p>
+                    <form action="#" method="POST" class="space-y-4">
+                        <input type="text" id="name" name="name" placeholder="Nome" required class="w-full p-3 border border-gray-300 rounded-md focus:ring-custom-blue focus:border-custom-blue bg-custom-white">
+                        <input type="email" id="email" name="email" placeholder="E-mail" required class="w-full p-3 border border-gray-300 rounded-md focus:ring-custom-blue focus:border-custom-blue bg-custom-white">
+                        <textarea id="message" name="message" placeholder="Mensagem" rows="4" required class="w-full p-3 border border-gray-300 rounded-md focus:ring-custom-blue focus:border-custom-blue bg-custom-white"></textarea>
+                        <button type="submit" class="w-full bg-custom-blue text-custom-white py-3 px-6 rounded-md hover:bg-custom-orange transition-colors duration-300 font-semibold">Enviar</button>
+                        <p class="text-center text-gray-500 my-3">ou</p>
+                        <a href="https://wa.me/244948558954" target="_blank" class="w-full flex items-center justify-center bg-[#25D366] text-custom-white py-3 px-6 rounded-md hover:bg-[#128C7E] transition-colors duration-300 font-semibold space-x-2">
+                            <i class="fab fa-whatsapp fa-lg"></i>
+                            <span>Entrar em Contacto pelo WhatsApp</span>
+                        </a>
+                    </form>
+                </div>
+
+                <div class="bg-custom-white p-6 md:p-8 rounded-lg shadow-lg text-gray-700 space-y-3">
+                    <h3 class="text-xl font-semibold text-custom-orange mb-4">Nosso Endereço e Horários</h3>
+                    <p><i class="fas fa-map-marker-alt mr-2 text-custom-blue"></i>Bela Vista, Rua da Cruz Linda</p>
+                    <p><i class="fas fa-envelope mr-2 text-custom-blue"></i>edyglobalsolutions@gmail.com</p>
+                    <p><i class="fas fa-phone mr-2 text-custom-blue"></i>948558954 | 936629314</p>
+                    
+                    <div class="mt-6 pt-4 border-t border-gray-200">
+                        <p class="flex justify-between"><strong>Domingo</strong> <span>Fechado</span></p>
+                        <p class="flex justify-between"><strong>Segunda-feira</strong> <span>08:30 – 16:30</span></p>
+                        <p class="flex justify-between"><strong>Terça-feira</strong> <span>08:30 – 16:30</span></p>
+                        <p class="flex justify-between"><strong>Quarta-feira</strong> <span>08:30 – 16:30</span></p>
+                        <p class="flex justify-between"><strong>Quinta-feira</strong> <span>08:30 – 16:30</span></p>
+                        <p class="flex justify-between"><strong>Sexta-feira</strong> <span>08:30 – 16:30</span></p>
+                        <p class="flex justify-between"><strong>Sábado</strong> <span>08:30 – 12:30</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-custom-orange text-custom-white py-10 text-center">
+        <div class="container mx-auto px-4">
+            <div class="social mb-6">
+                <h2 class="text-xl font-semibold mb-4">Siga-nos nas Redes Sociais</h2>
+                <ul class="flex justify-center space-x-6">
+                    <li><a href="https://facebook.com/profile.php?id=100076204514162" target="_blank" class="text-2xl hover:text-custom-blue transition-colors duration-300"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#" target="_blank" class="text-2xl hover:text-custom-blue transition-colors duration-300"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/edyglobal_solutions_su_lda/" target="_blank" class="text-2xl hover:text-custom-blue transition-colors duration-300"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+            <p class="text-sm">© 2024 Edy Global Solutions. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>
