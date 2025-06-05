@@ -18,11 +18,20 @@ document.addEventListener("DOMContentLoaded", function() {
     const totalImagens = imagens.length;
     let imagemAtual = 0;
 
+    let carrosselIntervalId;
+
     function atualizaCarrossel() {
         if (totalImagens > 0) {
             const posicao = imagemAtual * -100 + "%";
             imagensContainer.style.transform = "translateX(" + posicao + ")";
         }
+    }
+
+    function startCarrosselInterval() {
+        if (carrosselIntervalId) {
+            clearInterval(carrosselIntervalId);
+        }
+        carrosselIntervalId = setInterval(proximo, 3000);
     }
 
     function proximo() {
@@ -42,11 +51,21 @@ document.addEventListener("DOMContentLoaded", function() {
     const proximoBtn = document.getElementById("proximo");
     const anteriorBtn = document.getElementById("anterior");
 
-    if (proximoBtn) proximoBtn.addEventListener("click", proximo);
-    if (anteriorBtn) anteriorBtn.addEventListener("click", anterior);
+    if (proximoBtn) {
+        proximoBtn.addEventListener("click", () => {
+            proximo();
+            startCarrosselInterval();
+        });
+    }
+    if (anteriorBtn) {
+        anteriorBtn.addEventListener("click", () => {
+            anterior();
+            startCarrosselInterval();
+        });
+    }
 
     if (totalImagens > 1) {
-        setInterval(proximo, 3000);
+        startCarrosselInterval();
         if (proximoBtn && anteriorBtn) {
              proximoBtn.classList.remove('hidden');
              anteriorBtn.classList.remove('hidden');
@@ -55,7 +74,6 @@ document.addEventListener("DOMContentLoaded", function() {
         proximoBtn.classList.add('hidden');
         anteriorBtn.classList.add('hidden');
     }
-
 
     if (totalImagens > 0) {
         atualizaCarrossel();
